@@ -11,6 +11,7 @@ interface Project {
   description: string;
   image: string;
   technologies?: string[];
+  link: string;
 }
 
 const Projects = () => {
@@ -18,28 +19,32 @@ const Projects = () => {
 
   const projectsList: Project[] = [
     {
-      title: "AI-Powered Analytics Dashboard",
+      title: "Revenue Insights in Hospitality Domain using power bi",
       type: "Data Analytics",
-      period: "2023 - Present",
-      description: "Developed a real-time analytics dashboard using machine learning algorithms to predict business trends and provide actionable insights.",
+      period: "07/2023 - 09/2023",
+      description: "Developed a real-time analytics dashboard using power bi to predict business trends and provide actionable insights.",
       image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80",
-      technologies: ["Python", "TensorFlow", "React", "D3.js"]
+      technologies: ["Python", "Excel","Power BI", "Data Collection", "Data Cleaning", "Data Modeling", "Dashboard"],
+      link: "https://github.com/Srilokeshkolli/Revenue-Insights-in-Hospitality-Domain"
+      
     },
     {
-      title: "Smart City Data Platform",
-      type: "Big Data",
-      period: "2022 - 2023",
-      description: "Built a comprehensive data platform for smart city management, processing IoT sensor data and providing visualization tools.",
-      image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80",
-      technologies: ["Apache Spark", "Kafka", "Python", "MongoDB"]
+      title: "Brew-Sales-Dashboard-Analysis project",
+      type: "Data Analytics",
+      period: "12/2024 - 01/2025",
+      description: "This dashboard offers a complete perspective of coffee sales growth by country. Key analytics include total sales, sales by person, and sales by country, which are studied with order date, roast type, and loyalty card utilization.",
+      image: "https://sanishtech.com/i/691cab2ba153d4.02618862-1763486507.png",
+      technologies: ["Excel", "Excel formulas", "PivotTables","Excel dashboard"],
+      link: "https://github.com/Srilokeshkolli/Brew-Sales-Dashboard-Analysis"
     },
     {
-      title: "Predictive Maintenance System",
-      type: "Machine Learning",
+      title: "Music_Store Using SQL",
+      type: "Data Analytics",
       period: "2022",
       description: "Implemented a predictive maintenance system for industrial equipment using IoT sensors and machine learning algorithms.",
       image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80",
-      technologies: ["Python", "scikit-learn", "IoT", "AWS"]
+      technologies: ["Python", "scikit-learn", "IoT", "AWS"],
+      link: "https://github.com/Srilokeshkolli/Music_Store-_Data-Analysis-Project"
     },
     {
       title: "Financial Data Analysis Tool",
@@ -47,7 +52,8 @@ const Projects = () => {
       period: "2021 - 2022",
       description: "Created a financial analysis tool that processes market data and generates investment recommendations using advanced algorithms.",
       image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80",
-      technologies: ["R", "Python", "SQL", "Tableau"]
+      technologies: ["R", "Python", "SQL", "Tableau"],
+      link: ""
     }
   ];
 
@@ -161,6 +167,17 @@ const Projects = () => {
                       ))}
                     </div>
                   )}
+                  <div className="mt-6">
+  <a
+    href={selectedProject.link}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 underline"
+  >
+    <ExternalLink size={18} />
+    View Project
+  </a>
+</div>
                 </div>
               </motion.div>
             </motion.div>
